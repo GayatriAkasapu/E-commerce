@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/sample.css' %}" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+    font-family: Arial, sans-serif;
+    background-image: url('{% static "img/main3.jpeg" %}');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Keep the background image fixed */
+    color: #fff; /* Adjust text color for better readability */
+}
+
+.container {
+    position: absolute;
+    right: 0;
+}
+.home p {
+    color: black;
+    font-size: 25px;
+    padding-top: 10px;
+    font-weight: bold;
+}
+.navbar {
+    padding: 15px 80px;
+    background-color: skyblue; /* Setting a dark background color */
+}
+
+    </style>
+    <title>E-COMMERCE</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand title" href="#">E-<span>COMMERCE</span></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav" >
+            <ul class="navbar-nav ml-auto menu" >
+                <li class="nav-item">
+                    <a class="nav-link" href="#">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">CART</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/shop">MENU</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">CONTACT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">ABOUT</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="home">
+            <h1 class="title-1">IF <span>YOU</span> CAN'T STOP<br>THINKING ABOUT IT<br><span>BUY IT</span></h1>
+            <p>You can always find something you want</p>
+            <button type="button" onclick="window.location.href='/register';">Shop Now</button>
+        </div>
+    </div>
+    
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

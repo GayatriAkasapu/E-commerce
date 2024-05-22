@@ -1,0 +1,254 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronic Gadgets</title>
+    <!-- Bootstrap CSS -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="{% static 'css/main.css' %}" rel="stylesheet">
+    <style>
+        /* Custom styles for card hover effect */
+        .card {
+            transition: box-shadow 0.3s;
+            width: 100%; /* Adjust card width */
+            height: auto; /* Adjust card height */
+            background-color: #333; /* Default background color for cards */
+            border: 1px solid #ccc; /* Border for cards */
+            border-radius: 8px; /* Rounded corners for cards */
+            color: #fff;
+        }
+        .card:hover {
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+        }
+        .card-content {
+            padding: 20px;
+            text-align: center;
+        }
+        .card-title {
+            color:  #2c93c2; /* Custom text color for card titles */
+            font-size: 2rem; /* Adjust font size */
+            font-weight: bold; /* Bold font weight */
+        }
+        .card-text {
+            color: #fff; /* White text color for card text */
+            font-size: 1.2rem; /* Adjust font size */
+        }
+        .btn-primary {
+            background-color:lightcoral; /* Yellow background color for primary buttons */
+            border-color: lightcoral; /* Yellow border color for primary buttons */
+            color: #333;
+            font-weight: bold; /* Dark text color for primary buttons */
+        }
+        .btn-primary:hover {
+            background-color: lightgrey; /* Lighter yellow background color on hover */
+            border-color: lavender; /* Lighter yellow border color on hover */
+            color: #333; /* Dark text color on hover */
+        }
+        .myNav {
+            background-color: brown;
+        }
+        .navbar-custom .nav-link {
+            color: black !important; /* Change font color to black */
+            font-size: 1.2rem; /* Increase font size */
+            font-weight: bold;
+        }
+        .navbar-custom .navbar-brand {
+            color: black !important; /* Change font color to black */
+            font-size: 2.5rem; /* Increase font size for navbar-brand */
+            font-weight: bold;
+        }
+        .navbar-custom .nav-link:hover {
+            color: rgb(143, 212, 247) !important; /* Change text color to orange on hover */
+        }
+        body {
+            background-color: lightgrey;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom myNav">
+        <a class="navbar-brand" href="#">Groceries</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/shop">Menu</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Cards -->
+    <div class="container mt-4">
+        <div class="row">
+            <!-- Electronic Gadgets Cards -->
+            <div class="col-md-3 mb-4">
+                <div class="card shadow">
+                    <img src="{% static 'img/Milk.jpg' %}" class="card-img-top" alt="Milk">
+                    <div class="card-content">
+                        <h5 class="card-title">Milk</h5>
+                        <p class="card-text">Cost: $199</p>
+                        <a href="#" class="btn btn-primary">Buy Now</a>
+                        <a href="#" class="btn btn-secondary">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card shadow">
+                    <img src="{% static 'img/Eggs.jpeg' %}" class="card-img-top" alt="Eggs">
+                    <div class="card-content">
+                        <h5 class="card-title">Eggs</h5>
+                        <p class="card-text">Cost: $99</p>
+                        
+                        <a href="#" class="btn btn-primary">Buy Now</a>
+                        <a href="#" class="btn btn-secondary">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card shadow">
+                    <img src="{% static 'img/Bread.jpg' %}" class="card-img-top" alt="Bread">
+                    <div class="card-content">
+                        <h5 class="card-title">Bread</h5>
+                        <p class="card-text">Cost: $99</p>
+                        <p class="card-text">Buy 2 Get 1</p>
+                        <p class="card-text"> Get upto 5% off</p>
+                        <a href="#" class="btn btn-primary">Buy Now</a>
+                        <a href="#" class="btn btn-secondary">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card shadow">
+                    <img src="{% static 'img/Apples.jpeg' %}" class="card-img-top" alt="Apples">
+                    <div class="card-content">
+                        <h5 class="card-title">Apples</h5>
+                        <p class="card-text">Cost: $299</p>
+                        <a href="#" class="btn btn-primary">Buy Now</a>
+                        <a href="#" class="btn btn-secondary">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card shadow">
+                    <img src="{% static 'img/Bananas.jpg' %}" class="card-img-top" alt="Bananas">
+                    <div class="card-content">
+                        <h5 class="card-title">Bananas</h5>
+                        <p class="card-text">Cost: $49</p>
+                        <a href="#" class="btn btn-primary">Buy Now</a>
+                        <a href="#" class="btn btn-secondary">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card shadow">
+                    <img src="{% static 'img/Chicken breast.jpeg' %}" class="card-img-top" alt="Chicken breast">
+                    <div class="card-content">
+                        <h5 class="card-title"> Chicken breast</h5>
+                        <p class="card-text">Cost: $399</p>
+                        <p class="card-text">Get upto 15% off</p>
+                        <p class="card-text">Buy 2 Get 1</p>
+                        <a href="#" class="btn btn-primary">Buy Now</a>
+                        <a href="#" class="btn btn-secondary">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card shadow">
+                    <img src="{% static 'img/Ground beef.jpg' %}" class="card-img-top" alt="Ground beef">
+                    <div class="card-content">
+                        <h5 class="card-title">Ground beef</h5>
+                        <p class="card-text">Cost: $799</p>
+                        <p class="card-text">Get upto 15% off</p>
+                        <a href="#" class="btn btn-primary">Buy Now</a>
+                        <a href="#" class="btn btn-secondary">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card shadow">
+                    <img src="{% static 'img/Carrots.jpg' %}" class="card-img-top" alt="Carrots">
+                    <div class="card-content">
+                        <h5 class="card-title">Carrots</h5>
+                        <p class="card-text">Cost: $399</p>
+                        
+                        <a href="#" class="btn btn-primary">Buy Now</a>
+                        <a href="#" class="btn btn-secondary">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card shadow">
+                    <img src="{% static 'img/Broccoli.jpg' %}" class="card-img-top" alt="Broccoli">
+                    <div class="card-content">
+                        <h5 class="card-title">Broccoli</h5>
+                        <p class="card-text">Cost: $299</p>
+                        <a href="#" class="btn btn-primary">Buy Now</a>
+                        <a href="#" class="btn btn-secondary">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card shadow">
+                    <img src="{% static 'img/Cheese.jpeg' %}" class="card-img-top" alt="Cheese">
+                    <div class="card-content">
+                        <h5 class="card-title">Cheese</h5>
+                        <p class="card-text">Cost: $1199</p>
+                        <p class="card-text">Get upto 10% off</p>
+                        <a href="#" class="btn btn-primary">Buy Now</a>
+                        <a href="#" class="btn btn-secondary">Add to Cart</a>
+                </div>
+            </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card shadow">
+                    <img src="{% static 'img/Rice.jpg' %}" class="card-img-top" alt="Rice">
+                    <div class="card-content">
+                        <h5 class="card-title">Rice</h5>
+                        <p class="card-text">Cost: $1799</p>
+                        <p class="card-text">Buy 2 Get 1</p>
+                        <a href="#" class="btn btn-primary">Buy Now</a>
+                        <a href="#" class="btn btn-secondary">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card shadow">
+                    <img src="{% static 'img/Pasta.jpg' %}" class="card-img-top" alt="Pasta">
+                    <div class="card-content">
+                        <h5 class="card-title">Pasta</h5>
+                        
+                        <a href="#" class="btn btn-primary">Buy Now</a>
+                        <a href="#" class="btn btn-secondary">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <!-- Bootstrap JS and jQuery (for optional dropdowns and other features) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

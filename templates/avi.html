@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet">
+<title>Page Title</title>
+</head>
+<body>
+
+    <form>
+
+        <table border="2" cellpadding="5" cellspacing="3">
+        <tr> 
+            <th colspan="2"><i>Registration Form</i></th>
+        </tr>
+        <tr>
+            <th>student name</th>
+            <td><input type="text" required ></td>
+        </tr>
+        <tr>
+            <th>Father's name</th>
+            <td><input type="text" required></td>
+        </tr>
+        <tr>
+            <th>Mother's name</th>
+            <td><input type="text" required></td>
+        </tr>
+        <tr>
+            <th>Date of Birth</th>
+            <td><input type="date"></td>
+        </td>
+        </tr>
+        <tr>
+            <th>gender</th>
+            <td><input type="radio" name="gender">Male<input type="radio" name="gender">Female</td>
+        </td>
+        </tr>
+        <tr>
+            <th>Email ID</th>
+            <td><input type="email" required></td>
+        </tr>
+        <tr>
+            <th>password</th>
+            <td><input type="password" required></td>
+        </tr>
+        <tr>
+            <th>Address</th>
+            <td><textarea></textarea></td>
+        </tr>
+        <tr>
+            <th>state</th>
+            <td><select><option value="Andhra Pradesh">Andhra Pradesh</option>
+                                    <option value="Telangana">Telangana</option>
+                                     <option value="Tamilnadu">Tamilnadu</option></select></td>
+        </tr>
+        <tr>
+            <th>city</th>
+            <td><select><option value="Palasa">Palasa</option>
+                                    <option value="Srikakulam">Srikakulam</option>
+                                     <option value="Tekkali">Tekkali</option></select></td>
+        </tr>
+        <tr>
+            <th></th>
+            <td><input type="submit" value ="register"></td> 
+        </tr>
+        </table>  
+</form>
+
+</body>
+</html>
